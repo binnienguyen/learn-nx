@@ -1,0 +1,4 @@
+{
+  "dashboard": "http://localhost:4201",
+  "login-app": "http://localhost:4202"
+}
