@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'host-app';
   theme = true
+  switchValue = false;
 
   // ngOnInit(): void {
   //   console.log('Componente de registro cargado');
