@@ -1,5 +1,5 @@
 <nz-layout>
-  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="undefined">
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
     <div class="logo" >
       <span [hidden]="isCollapsed">
          MY APP
@@ -28,7 +28,6 @@
             [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
             (click)="isCollapsed = !isCollapsed"
           ></span>
-    <nz-switch [(ngModel)]="switchValue"></nz-switch>
 </nz-header>
     <nz-content>
       <router-outlet></router-outlet>
