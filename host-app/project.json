@@ -16,7 +16,7 @@
         "polyfills": ["zone.js"],
         "tsConfig": "host-app/tsconfig.app.json",
         "assets": ["host-app/src/favicon.ico", "host-app/src/assets"],
-        "styles": ["host-app/src/styles.less"],
+        "styles": ["host-app/src/styles.less", "node_modules/ng-zorro-antd/ng-zorro-antd.min.css"],
         "scripts": [],
         "customWebpackConfig": {
           "path": "host-app/webpack.config.ts"
