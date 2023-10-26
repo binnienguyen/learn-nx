@@ -13,11 +13,12 @@ import {NzAvatarModule} from "ng-zorro-antd/avatar";
 import {NzIconModule} from "ng-zorro-antd/icon";
 import {NzMenuModule} from "ng-zorro-antd/menu";
 import {NzDropDownModule} from "ng-zorro-antd/dropdown";
+import {NzEmptyModule} from "ng-zorro-antd/empty";
 
 @NgModule({
   declarations: [RemoteEntryComponent, NxWelcomeComponent],
   imports: [CommonModule, RouterModule.forChild(remoteRoutes), NzLayoutModule, NzBreadCrumbModule,
-    NzDividerModule, NzTableModule, NzAvatarModule, NzIconModule, NzMenuModule, NzDropDownModule],
+    NzDividerModule, NzTableModule, NzAvatarModule, NzIconModule, NzMenuModule, NzDropDownModule, NzEmptyModule],
   providers: [],
 })
 export class RemoteEntryModule {}
