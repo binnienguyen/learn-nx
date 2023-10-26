@@ -8,9 +8,10 @@ import {NxWelcomeComponent} from './nx-welcome.component';
 import {NzMenuModule} from "ng-zorro-antd/menu";
 import {NzLayoutModule} from "ng-zorro-antd/layout";
 import {NzIconModule} from "ng-zorro-antd/icon";
-import { MenuFoldOutline, MenuUnfoldOutline, AreaChartOutline, HomeOutline } from '@ant-design/icons-angular/icons';
+import { MenuFoldOutline, MenuUnfoldOutline, AreaChartOutline, HomeOutline, LoginOutline, AppleOutline } from '@ant-design/icons-angular/icons';
 
-const icons: IconDefinition[] = [ MenuFoldOutline, MenuUnfoldOutline, HomeOutline, AreaChartOutline];
+const icons: IconDefinition[] = [ MenuFoldOutline, MenuUnfoldOutline, HomeOutline, AreaChartOutline, 
+  LoginOutline, AppleOutline];
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],

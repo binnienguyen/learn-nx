@@ -1,7 +1,7 @@
 <nz-layout>
   <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
-    <div class="logo" >
-      <span [hidden]="isCollapsed">
+    <div class="logo">
+      <span [hidden]="isCollapsed" >
          MY APP
       </span>
     </div>
@@ -16,6 +16,12 @@
         <div style="display: flex; align-items: center">
           <span nz-icon nzType="area-chart" nzTheme="outline"></span>
           <span>Dashboard</span>
+        </div>
+      </li>
+      <li nz-menu-item [nzSelected]="this.isSelected('/login-app')" routerLink="/login-app" routerLinkActive="active">
+        <div style="display: flex; align-items: center">
+          <span nz-icon nzType="login" nzTheme="outline"></span>
+          <span>Login</span>
         </div>
       </li>
     </ul>
