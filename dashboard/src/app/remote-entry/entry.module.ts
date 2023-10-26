@@ -7,10 +7,12 @@ import { NxWelcomeComponent } from './nx-welcome.component';
 import { remoteRoutes } from './entry.routes';
 import {NzLayoutModule} from "ng-zorro-antd/layout";
 import {NzBreadCrumbModule} from "ng-zorro-antd/breadcrumb";
+import {NzDividerModule} from "ng-zorro-antd/divider";
 
 @NgModule({
   declarations: [RemoteEntryComponent, NxWelcomeComponent],
-  imports: [CommonModule, RouterModule.forChild(remoteRoutes), NzLayoutModule, NzBreadCrumbModule],
+  imports: [CommonModule, RouterModule.forChild(remoteRoutes), NzLayoutModule, NzBreadCrumbModule,
+  NzDividerModule],
   providers: [],
 })
 export class RemoteEntryModule {}
