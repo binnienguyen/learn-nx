@@ -8,11 +8,16 @@ import { remoteRoutes } from './entry.routes';
 import {NzLayoutModule} from "ng-zorro-antd/layout";
 import {NzBreadCrumbModule} from "ng-zorro-antd/breadcrumb";
 import {NzDividerModule} from "ng-zorro-antd/divider";
+import {NzTableModule} from "ng-zorro-antd/table";
+import {NzAvatarModule} from "ng-zorro-antd/avatar";
+import {NzIconModule} from "ng-zorro-antd/icon";
+import {NzMenuModule} from "ng-zorro-antd/menu";
+import {NzDropDownModule} from "ng-zorro-antd/dropdown";
 
 @NgModule({
   declarations: [RemoteEntryComponent, NxWelcomeComponent],
   imports: [CommonModule, RouterModule.forChild(remoteRoutes), NzLayoutModule, NzBreadCrumbModule,
-  NzDividerModule],
+    NzDividerModule, NzTableModule, NzAvatarModule, NzIconModule, NzMenuModule, NzDropDownModule],
   providers: [],
 })
 export class RemoteEntryModule {}
