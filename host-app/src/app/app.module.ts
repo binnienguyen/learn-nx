@@ -9,8 +9,13 @@ import {NzMenuModule} from "ng-zorro-antd/menu";
 import {NzLayoutModule} from "ng-zorro-antd/layout";
 import {NzIconModule} from "ng-zorro-antd/icon";
 import { MenuFoldOutline, MenuUnfoldOutline, AreaChartOutline, HomeOutline, LoginOutline, AppleOutline } from '@ant-design/icons-angular/icons';
+import { registerLocaleData } from '@angular/common';
+import { provideNzI18n, en_US } from 'ng-zorro-antd/i18n';
+import en from '@angular/common/locales/en';
 
-const icons: IconDefinition[] = [ MenuFoldOutline, MenuUnfoldOutline, HomeOutline, AreaChartOutline, 
+registerLocaleData(en);
+
+const icons: IconDefinition[] = [ MenuFoldOutline, MenuUnfoldOutline, HomeOutline, AreaChartOutline,
   LoginOutline, AppleOutline];
 
 @NgModule({
@@ -22,7 +27,7 @@ const icons: IconDefinition[] = [ MenuFoldOutline, MenuUnfoldOutline, HomeOutlin
     NzLayoutModule,
     NzIconModule.forRoot(icons),
   ],
-  providers: [],
+  providers: [provideNzI18n(en_US)],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
