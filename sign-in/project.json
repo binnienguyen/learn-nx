@@ -1,0 +1,95 @@
+{
+  "name": "sign-in",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "my-app",
+  "sourceRoot": "sign-in/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/sign-in",
+        "index": "sign-in/src/index.html",
+        "main": "sign-in/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "sign-in/tsconfig.app.json",
+        "assets": ["sign-in/src/favicon.ico", "sign-in/src/assets"],
+        "styles": ["sign-in/src/styles.less"],
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "sign-in/webpack.config.ts"
+        }
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "sign-in/webpack.prod.config.ts"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@nx/angular:webpack-dev-server",
+      "options": {
+        "port": 4201,
+        "publicHost": "http://localhost:4201"
+      },
+      "configurations": {
+        "production": {
+          "browserTarget": "sign-in:build:production"
+        },
+        "development": {
+          "browserTarget": "sign-in:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "sign-in:build"
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "defaultConfiguration": "production",
+      "options": {
+        "buildTarget": "sign-in:build",
+        "port": 4201,
+        "watch": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "sign-in:build:development"
+        },
+        "production": {
+          "buildTarget": "sign-in:build:production"
+        }
+      }
+    }
+  }
+}
