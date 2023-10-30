@@ -1,4 +1,7 @@
 {
   "dashboard": "http://localhost:4201",
-  "login-app": "http://localhost:4202"
+  "login-app": "http://localhost:4202",
+  "login-page": "http://localhost:4203",
+  "register": "http://localhost:4203",
+  "login": "http://localhost:4201"
 }

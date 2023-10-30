@@ -1,9 +1,9 @@
 import { ModuleFederationConfig } from '@nx/webpack';
 
 const config: ModuleFederationConfig = {
-  name: 'login-app',
+  name: 'login',
   exposes: {
-    './Module': 'login-app/src/app/remote-entry/entry.module.ts',
+    './Module': 'login/src/app/remote-entry/entry.module.ts',
   },
 };
 
