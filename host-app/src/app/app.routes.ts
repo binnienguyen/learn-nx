@@ -4,18 +4,9 @@ import { loadRemoteModule } from '@nx/angular/mf';
 
 export const appRoutes: Route[] = [
   {
-    path: 'login-app',
+    path: 'sign-in',
     loadChildren: () =>
-      loadRemoteModule('login-app', './Module').then(
-        (m) => m.RemoteEntryModule
-      ),
-  },
-  {
-    path: 'dashboard',
-    loadChildren: () =>
-      loadRemoteModule('dashboard', './Module').then(
-        (m) => m.RemoteEntryModule
-      ),
+      loadRemoteModule('sign-in', './Module').then((m) => m.RemoteEntryModule),
   },
   {
     path: '',
