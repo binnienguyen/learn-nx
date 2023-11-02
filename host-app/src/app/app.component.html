@@ -1,14 +1,6 @@
 <nz-layout>
   <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
-    <div class="sidebar-logo">
-      <span>
-        <img src="assets/image/logo.png" alt="logo">
-      </span>
-      <span [hidden]="isCollapsed" >
-         MY APP
-      </span>
-    </div>
-    <ul nz-menu nzTheme="dark" nzMode="inline" >
+    <ul nz-menu nzTheme="light" nzMode="inline" >
       <li nz-menu-item [nzSelected]="this.isSelected('/')" routerLink="/" routerLinkActive="active">
         <div style="display: flex; align-items: center">
           <span nz-icon nzType="home" nzTheme="outline"></span>
@@ -27,20 +19,22 @@
           <span>Login</span>
         </div>
       </li>
-    </ul>
-  </nz-sider>
-  <nz-layout>
-    <nz-header>
+      <li [class]="isCollapsed ? '' : 'expanded'" class="bottom-menu">
+        <div style="display: flex; align-items: center">
           <span
-            class="trigger"
             nz-icon
+            style="min-width: 14px; font-size: 14px"
             [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
             (click)="isCollapsed = !isCollapsed"
           ></span>
-</nz-header>
-    <nz-content style="padding-top: 20px">
-      <router-outlet></router-outlet>
-    </nz-content>
+          <span></span>
+        </div>
+      </li>
+    </ul>
+
+  </nz-sider>
+  <nz-layout>
+    <router-outlet></router-outlet>
   </nz-layout>
 </nz-layout>
 

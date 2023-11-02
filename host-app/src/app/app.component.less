@@ -21,11 +21,6 @@
   font-size: large;
 }
 
-nz-header {
-  background: #fff;
-  padding: 0;
-}
-
 nz-content {
   margin: 0 16px;
   min-height: 100vh;
@@ -46,6 +41,37 @@ nz-menu-item {
   min-height: 360px;
 }
 
+nz-sider {
+  background: #fff;
+}
+
 nz-footer {
   text-align: center;
+}
+
+.bottom-menu {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  padding: 0 16px;
+  overflow: hidden;
+  line-height: 40px;
+  text-overflow: ellipsis;
+  position: absolute;
+  bottom: 10px;
+  background: #FFF !important;
+  width: 80px;
+  transition: width 3s;
+}
+
+.bottom-menu.expanded {
+  width: auto;
+  transition: width 3s;
+}
+
+nz-sider {
+  min-height: 100vh;
+  position: sticky;
 }

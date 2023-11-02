@@ -11,7 +11,7 @@ interface Person {
   selector: 'my-app-nx-welcome',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.less'],
-  encapsulation: ViewEncapsulation.None,
+  // encapsulation: ViewEncapsulation.None,
 })
 
 export class NxWelcomeComponent implements OnInit{
