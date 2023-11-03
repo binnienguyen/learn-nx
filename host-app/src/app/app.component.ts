@@ -17,7 +17,4 @@ export class AppComponent {
     return route === this.router.url;
   }
 
-  // ngOnInit(): void {
-  //   console.log('Componente de registro cargado');
-  // }
 }
