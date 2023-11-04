@@ -7,7 +7,69 @@ nz-header {
   padding: 0 24px;
 }
 
+nz-content {
+  padding: 24px;
+  line-height: 28px;
+}
+
 .title {
   font-weight: 700;
   font-size: 22px;
+}
+
+.select {
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.select {
+  position: relative;
+  padding-right: 5px; /* Add right padding to create space for the icon */
+}
+
+.select::after {
+  content: "\25BC"; /* Unicode for a down arrow character ▼ */
+  position: absolute;
+  top: 50%;
+  right: 5px; /* Adjust this value to move the icon to the desired position */
+  transform: translateY(-50%);
+  font-size: 16px; /* Adjust the font size as needed */
+  color: #000; /* Adjust the color of the arrow icon */
+}
+
+.code-box-meta.markdown {
+  position: relative;
+  width: 100%;
+  font-size: 14px;
+  border-radius: 0 0 2px 2px;
+  transition: background-color 0.4s;
+  margin-top: 24px;
+}
+
+.markdown {
+  color: #000000d9;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.code-box .code-box-title, .code-box .code-box-title {
+  color: #000000d9;
+  background: #fff;
+}
+
+.code-box-title {
+  position: absolute;
+  top: -14px;
+  margin-left: 4px;
+  padding: 1px 8px;
+  background: #f0f2f5;
+  border-radius: 2px 2px 0 0;
+  transition: background-color 0.4s;
+}
+
+.code-box-description {
+  padding: 18px 0 12px;
+  border: 1px solid rgba(0,0,0,.06);
 }

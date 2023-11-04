@@ -9,6 +9,78 @@
         <a routerLink="/dashboard">Security group</a>
       </nz-breadcrumb-item>
     </nz-breadcrumb>
-    <div class="title">Security group</div>
+    <h2>Security group</h2>
   </div>
 </nz-header>
+<nz-content>
+  /*component select security*/
+  <h3>Danh sách Security Group</h3>
+  <nz-row style="padding-bottom: 8px">
+    <nz-col nzSpan="6">
+      <div><strong>Chọn Security group</strong></div>
+    </nz-col>
+    <nz-col nzSpan="12">
+      <nz-space>
+        <div style="margin-right: 32px">
+          <select class="select" [(ngModel)]="selectedValue" (change)="onSelectChange()">
+            <option *ngFor="let option of options" [value]="option">{{ option.name }}</option>
+          </select>
+        </div>
+        <button nz-button  nzType="primary" nzDanger>Xoá Security group</button>
+      </nz-space>
+    </nz-col>
+    <nz-col nzSpan="6">
+      <button nzBlock nz-button  nzType="primary">Thêm mới Security group</button>
+    </nz-col>
+  </nz-row>
+  <nz-row>
+    <nz-col nzSpan="6">
+      <div><strong>Mô tả</strong></div>
+    </nz-col>
+    <nz-col nzSpan="18">
+      <textarea rows="4" nz-input></textarea>
+    </nz-col>
+  </nz-row>
+
+  <nz-row>
+    <section class="code-box-meta markdown">
+      <div class="code-box-title">
+        Inbound
+      </div>
+      <div class="code-box-description">
+        <nz-row nzJustify="end" style="padding-bottom: 16px; padding-right: 32px">
+          <button nz-button  nzType="primary">Thêm mới Inbound</button>
+        </nz-row>
+        <nz-table #basicTable
+                  [nzData]="listInbound"
+                  nzShowSizeChanger
+                  [nzFrontPagination]="false"
+                  [nzTotal]="100"
+                  [nzPageSize]="50"
+                  [nzPageIndex]="1"
+        >
+          <thead>
+          <tr>
+            <th nzAlign="center">IP Version</th>
+            <th nzAlign="center">Protocol</th>
+            <th nzAlign="center">PortRange</th>
+            <th nzAlign="center">RemoteIPPrefix</th>
+            <th nzAlign="center">Thao tác</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let data of basicTable.data">
+            <td nzAlign="center">{{ data.ip_version }}</td>
+            <td nzAlign="center">{{ data.protocol }}</td>
+            <td nzAlign="center">{{ data.port_range }}</td>
+            <td nzAlign="center">{{ data.remote }}</td>
+            <td nzAlign="center">
+              <button nz-button  nzType="primary" nzDanger>Xoá</button>
+            </td>
+          </tr>
+          </tbody>
+        </nz-table>
+      </div>
+    </section>
+  </nz-row>
+</nz-content>
